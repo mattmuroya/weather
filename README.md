@@ -1,2 +1,2 @@
 # weather
-Forecasting app leveraging the OpenWeatherMap API
+Forecasting app that leverages [WeatherAPI](https://www.weatherapi.com/)

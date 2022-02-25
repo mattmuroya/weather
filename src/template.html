@@ -4,11 +4,51 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather</title>
+  <title>How's the Weather?</title>
 </head>
 <body>
 
  <!-- icons: https://www.flaticon.com/packs/weather-161 -->
-  
+ <!-- public API key: e32d2ec4fe53b1c6225b74e542aa9e3c -->
+
+  <header class="p-10">
+    <h1 class="text-2xl">How's the Weather?</h1>
+  </header>
+  <main class="px-10">
+    <div id="search" class="mb-10">
+      <form id="form" class="">
+        <input id="search-field" type="text" class="shadow appearance-none border rounded py-2 px-3 text-gray-700" placeholder="Find a location">
+        <button id="search-btn" class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-3 rounded" type="submit">Search</button>
+      </form>
+      <div id="error"></div>
+    </div>
+
+    <div class="flex space-x-2">
+      <span>F</span>
+      <label for="toggle" class="inline-block relative items-center mb-4 cursor-pointer">
+        <input type="checkbox" id="toggle" title="switch units" class="sr-only">
+        <div class="w-11 h-6 bg-gray-200 rounded-full border border-gray-200 toggle-bg"></div>
+      </label>
+      <span>C</span>
+    </div>
+    
+    <div id="weather" class="max-w-sm p-4 rounded overflow-hidden shadow-lg">
+      <div class="flex items-start">
+        <img id="weather-img" class="inline-block mr-4" src="" alt="">
+        <div class="">
+          <h3 id="city" class="inline-block text-3xl"></h3>
+          <h4 class="mb-4">
+            <span id="region"></span>
+            <span id="country"></span>
+          </h4>
+          <div id="weather-description"></div>
+          <div id="temperature" class="text-6xl"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="p-10">
+    <!-- <a href="https://www.flaticon.com/free-icons/rain" title="rain icons">Rain icons created by iconixar - Flaticon</a> -->
+  </footer>
 </body>
 </html>
